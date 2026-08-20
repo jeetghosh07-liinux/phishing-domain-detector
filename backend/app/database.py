@@ -32,6 +32,8 @@ def get_db() -> Session:
         db.close()
 
 
+from contextlib import contextmanager
+
 @contextmanager
 def get_db_context():
     """Context manager for database session"""
